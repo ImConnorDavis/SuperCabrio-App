@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SuperCabrio.Pages.InfoPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center">
+            <Button x:Name="PasswordInfoBtn" Text="▲ How Can I Change My Password? ▲" Clicked="PasswordBtnClicked"/>
+                <Label x:Name="PasswordInfoLbl" Text="Email our support team to request a password change using the fields down below" HorizontalTextAlignment="Center" IsVisible="false"/>
+            <Button x:Name="GlitchBtn" Text="▲ Where Can I Report Glitches? ▲" Clicked="GlitchBtnClicked"/>
+                <Label x:Name="GlitchLbl" Text="You can report any glitches or issues down below" HorizontalTextAlignment="Center" IsVisible="false"/>
+            <Button x:Name="IdeasBtn" Text="▲ Where Can I Send In Ideas? ▲" Clicked="IdeasBtnClicked"/>
+                <Label x:Name="IdeasLbl" Text="You can send us any ideas or recommendations using the fields down below" HorizontalTextAlignment="Center" IsVisible="false"/>
+            <Entry x:Name="EmailName" Placeholder="Enter Your Email" HorizontalTextAlignment="Center"/>
+            <Editor x:Name="EmailEntry" Placeholder="Enter Your Email Contents"/>
+            <Label x:Name="ErrorLbl" Text="Email Address Is Invalid" HorizontalOptions="Center" IsVisible="false"/>
+            <Button Text="Send Email" HorizontalOptions="Center" Clicked="SendEmailClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

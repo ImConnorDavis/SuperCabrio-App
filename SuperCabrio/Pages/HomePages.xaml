@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:admob="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob" xmlns:me="clr-namespace:SuperCabrio.Pages" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    x:Class="SuperCabrio.Pages.HomePages"
+    NavigationPage.HasBackButton="False"
+    Title="SuperCabrio"
+    BarBackgroundColor="Gray"
+    SelectedTabColor="{AppThemeBinding Light=Black, Dark=White}"
+    UnselectedTabColor="Gray">
+
+    <TabbedPage.Children>
+        <me:PostPage Title="Home" IconImageSource="homeicon.png"/>
+        <me:MapPage Title="Map" IconImageSource="map.png" />
+        <me:NewPostPage Title="Post" IconImageSource="plusicon.png"/>
+    </TabbedPage.Children>
+
+    <ContentPage Title="Profile" IconImageSource="profileicon.png">
+        <ContentPage.ToolbarItems>
+            <ToolbarItem x:Name="SignOutBtn" Text="Sign Out" Clicked="SignOutBtn_Clicked"/>
+        </ContentPage.ToolbarItems>
+        <ContentPage.Content>
+            <StackLayout>
+                <StackLayout VerticalOptions="Start">
+                <Frame BackgroundColor="Gray">
+                    <StackLayout>
+                        <Label x:Name="welcome" HorizontalOptions="Center" FontAttributes="Bold" Padding="0,0,0,0"/>
+                    </StackLayout>
+                </Frame>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                    <Label x:Name="UserNameLbl" HorizontalTextAlignment="Center"/>
+                    <Button x:Name="ViewMyPostBtn" Text="View Your Post" TextColor="#42aaff" BorderColor="#42aaff" BorderWidth="1" Clicked="ViewMyPostBtn_Clicked"/>
+                    <Label Text="Check Winning Posts On The Instagram Page" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" VerticalOptions="End">
+                    <Label Text="SuperCabrio Instagram" HorizontalTextAlignment="Center"/>
+                    <Button ImageSource="InstaIcon" HeightRequest="45" Clicked="InstagramClicked"/>
+                    <Label Text="1 Post/Day • 3 Votes/Day" HorizontalTextAlignment="Center"/>
+                    <Button Text="Support Help" Clicked="MoreInfoBtnClicked"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="End">
+                    <admob:MTAdView AdsId="ca-app-pub-3940256099942544/6300978111" />
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SuperCabrio.Pages.LoginPage"
+    NavigationPage.HasBackButton="False"
+    BackgroundColor="Black"
+    NavigationPage.HasNavigationBar="False"
+    Title="SuperCabrio">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="lambo.jpeg"/>
+            <Label Text="SuperCabrio" Margin="0,150,0,0" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="50" FontFamily="EpicFont" TextColor="white"/>
+            <StackLayout Margin="30,0,30,0" HorizontalOptions="Center" VerticalOptions="Center">
+                <ActivityIndicator x:Name="SignInLoader" Color="White" IsRunning="false"/>
+                <Button x:Name="SignInBtn" TextColor="White"  Scale="1.1" Padding="8" BorderWidth="1" BorderColor="White" Text="Sign In" IsVisible="true" Clicked="OnSignInClicked"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

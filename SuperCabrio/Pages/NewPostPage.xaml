@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:admob="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    x:Class="SuperCabrio.Pages.NewPostPage">
+    <ContentPage.Content>
+        <Grid>
+                <Grid VerticalOptions="Start">
+                    <Button Grid.Column="0" x:Name="PickImageBtn" Text="Pick Image" Clicked="Image_Picker"/>
+                    <Button Grid.Column="1" x:Name="SaveImageBtn" Text="Post" Clicked="SaveCommand"/>
+                </Grid>
+                    <Label x:Name="PictureLbl" Grid.Row="1" Text="Upload The Best Car Picture You've Taken And Select Location" HorizontalOptions="Center" HorizontalTextAlignment="Center" TextColor="Gray"/>
+                    <Image Grid.RowSpan="7" Grid.Row="1" x:Name="PickedImage"/>
+                <Grid Grid.Row="8">
+                    <Entry Grid.Column="0" Grid.ColumnSpan="2" x:Name="LocSearch"  Placeholder="Select Location" ClearButtonVisibility="WhileEditing" HorizontalTextAlignment="Center" HorizontalOptions="End" WidthRequest="195"/>
+                    <Button Grid.Column="2" x:Name="SearchBtn" Text="Search" Clicked="SearchBtnClicked" BorderWidth="1" BorderColor="Black" TextColor="Black" BackgroundColor="#42aaff" Padding="10" HorizontalOptions="Start"/>
+                </Grid>
+                <maps:Map Grid.RowSpan="3" Grid.Row="9" x:Name="SelectMap" MapClicked="SpotClicked"/>
+                <admob:MTAdView Grid.Row="12" VerticalOptions="End" AdsId="ca-app-pub-3940256099942544/2934735716" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    x:Class="SuperCabrio.Pages.ViewPost">
+    <ContentPage.Content>
+        <Grid RowSpacing="2" RowDefinitions="60,200*,50,130">
+            <Frame Grid.Row="0" BorderColor="black" BackgroundColor="Gray">
+                <Label x:Name="PostName" HorizontalOptions="Center"/>
+            </Frame>
+            <Image x:Name="PostImage" Margin="1" Grid.Row="1" VerticalOptions="StartAndExpand" HorizontalOptions="Center"/>
+            <Grid Grid.Row="2">
+                <Label x:Name="TimeStamp" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center"/>
+                <Label Text="Time Posted" Grid.Column="0" Grid.Row="1" HorizontalOptions="Center"/>
+                <Label Text="Votes Left" Grid.Column="1" Grid.Row="1" HorizontalOptions="Center"/>
+                <Label x:Name="VotesLeftLbl" Grid.Column="1" Grid.Row="0" HorizontalOptions="Center"/>
+                <Label x:Name="VoteCount" Grid.Column="2" Grid.Row="0" HorizontalOptions="Center"/>
+                <Button x:Name="VoteBtn" Grid.Column="2" Grid.Row="1" TextColor="#42aaff" Clicked="VoteBtnClicked" HorizontalOptions="Center"/>
+            </Grid>
+            <maps:Map Grid.Row="3" x:Name="PictureMap"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
