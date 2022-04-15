@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperCabrio", "SuperCabrio.csproj", "{32F1F069-7401-44D4-81F6-F45E1027C121}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32F1F069-7401-44D4-81F6-F45E1027C121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F1F069-7401-44D4-81F6-F45E1027C121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F1F069-7401-44D4-81F6-F45E1027C121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F1F069-7401-44D4-81F6-F45E1027C121}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB2BF610-B30A-4164-9073-BDC95DA2D368}
+	EndGlobalSection
+EndGlobal
